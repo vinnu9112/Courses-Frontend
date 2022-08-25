@@ -1,0 +1,37 @@
+<Router>
+      <ToastContainer/>
+      <Container>
+        <Header />
+        <Row>
+          <Col md={4}>
+              <Menu />
+          </Col>
+          <Col md={8}>
+              <Route path="/" component={Home} exact />
+              <Route path="/add-course" component={AddCourse} exact />
+              <Route path="/view-courses" component={AllCourses} exact />
+          </Col>
+        </Row>
+      </Container>
+</Router>
+
+<ToastContainer /> 
+      {/* <Home/>
+      <Allcourses></Allcourses>
+      <AddCourse></AddCourse> */}
+      <Container>
+        <Header/>
+        <Row>
+          <Col md = {4}><Menus/></Col>
+          <Col md ={8}>
+            {/* <Home/> */}
+            <BrowserRouter>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/add-course" element={<AddCourse />} />
+              <Route path="/view-courses" element={<Allcourses />} />
+            </Routes>
+            </BrowserRouter>
+            </Col>
+        </Row>
+      </Container>
